@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "ed792198-df03-4db7-803a-8e20991fbf4f",
+		"name": "Perpustakaan App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8894770"
+	},
+	"item": [
+		{
+			"name": "Pegawai",
+			"item": [
+				{
+					"name": "GET Pegawai",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAzMDc4Mzk0LCJleHAiOjE3MDMwNzg0NTQsIm5iZiI6MTcwMzA3ODM5NCwianRpIjoiMTU3QThCRE5UMjJxRTB6QSIsInN1YiI6IjEiLCJwcnYiOiIxNGEyYmZmODY5N2JkNTEwNDJjZmVhMDViMWNiOGEyYmRlYjAwNDc3In0.fRaPsg4mZ_17eX1JgLUlhy9ALMbqz2_o3gtwG_ee-nw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/pegawai/get-data",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pegawai",
+								"get-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Pegawai",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "nama_pegawai",
+									"value": "Anna Mannheim",
+									"type": "text"
+								},
+								{
+									"key": "no_telp",
+									"value": "123123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "annamanheim@email.com",
+									"type": "text"
+								},
+								{
+									"key": "nik",
+									"value": "1234567890123456s",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Kopo",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/pegawai/save-data",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pegawai",
+								"save-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Soft Delete Pegawai",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/pegawai/delete-data?id=222",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pegawai",
+								"delete-data"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "222"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "superadmin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "superadmin",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "Super Admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "superadmin@email.com",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "08232323",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "superadmin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "superadmin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzAzMDc3OTc3LCJleHAiOjE3MDMwODE1NzcsIm5iZiI6MTcwMzA3Nzk3NywianRpIjoiRGd3Tk80VUNkZG9XWTA0SSIsInN1YiI6IjEiLCJwcnYiOiIxNGEyYmZmODY5N2JkNTEwNDJjZmVhMDViMWNiOGEyYmRlYjAwNDc3In0.sc_3Bob9PNConL1M55No-ejoZ8t4lzsXHiPZ82gTcIw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
